@@ -9,6 +9,6 @@ class Exerc_1 {
         a = a + 1;
         b = (4 * a + 1) / 10;
         c = (4 * a + 1) % 10;
-      System.out.println(a+" "+b+" "+c+" "+d+" "+e);
+        System.out.println(a+" "+b+" "+c+" "+d+" "+e);
        }
 }
