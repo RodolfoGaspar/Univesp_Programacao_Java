@@ -1,3 +1,6 @@
+[![Coverage Status](https://coveralls.io/repos/github/RodolfoGaspar/Univesp_Programacao_Java/badge.svg?branch=master)](https://coveralls.io/github/RodolfoGaspar/Univesp_Programacao_Java?branch=master)
+
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/RodolfoGaspar/Univesp_Programacao_Java/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
