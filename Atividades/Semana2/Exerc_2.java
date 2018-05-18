@@ -6,7 +6,7 @@ class Exerc_2 {
         float tCambioDolar;
         float vDolar;
 
-        vDolar = 5.1F;
+        vDolar = 5.1;
         tCambioDolar = 3.6F;
 
         System.out.println("Dólar: US$"+vDolar);
