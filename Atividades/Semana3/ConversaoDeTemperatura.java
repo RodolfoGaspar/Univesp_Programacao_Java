@@ -36,19 +36,27 @@ Para converter Kelvin em Fahrenheit: a temperatura informada estará em Kelvin, 
 class ConversaoDeTemperatura {
       public static void main(String[] args) {
         System.out.println("Iniciando conversão de temperatura...\n");
+        double temperatura;
 
+        temperatura = 0; //Celsius
+        System.out.println(temperatura + " Grau Celsius é " + ConverteTemperatura(temperatura,1) + " Grau Fahrenheit");
 
-        System.out.println(ConverteTemperatura(40,1));
+        temperatura = 0; //Fahrenheit
+        System.out.println(temperatura + " Grau Fahrenheit é " + ConverteTemperatura(temperatura,2) + " Grau Celsius");
 
-        System.out.println(ConverteTemperatura(104,2));
+        temperatura = 0; //Celsius
+        System.out.println(temperatura + " Grau Celsius é " + ConverteTemperatura(temperatura,3) + " Grau Kelvin");
 
-        System.out.println(ConverteTemperatura(0,3));
+        temperatura = 0; //Kelvin
+        System.out.println(temperatura + " Grau Kelvin é " + ConverteTemperatura(temperatura,4) + " Grau Celsius");
 
-        System.out.println(ConverteTemperatura(273,4));
+        temperatura = 0; //Fahrenheit
+        System.out.println(temperatura + " Grau Fahrenheit é " + ConverteTemperatura(temperatura,5) + " Grau Kelvin");
 
-        System.out.println(ConverteTemperatura(0,5));
+        temperatura = 0; //Kelvin
+        System.out.println(temperatura + " Grau Kelvin é " + ConverteTemperatura(temperatura,6) + " Grau Fahrenheit");
 
-        System.out.println(ConverteTemperatura(273,6));
+        System.out.println(ConverteTemperatura(temperatura,7) + "");
       }
 
       public static double ConverteTemperatura(double temperatura, int tipoConversao){
@@ -73,6 +81,9 @@ class ConversaoDeTemperatura {
             break;
           case(6): //Fahrenheit para Kelvin
             resultado = ((temperatura - 32)/9)*5+273; //Fahrenheit
+            break;
+          default:
+            resultado = temperatura/0;
             break;
         }
 
