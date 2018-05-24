@@ -39,24 +39,24 @@ class ConversaoDeTemperatura {
         double temperatura;
 
         temperatura = 0; //Celsius
-        System.out.println(temperatura + " Grau Celsius é " + ConverteTemperatura(temperatura,1) + " Grau Fahrenheit");
+        System.out.println("1-> " + temperatura + " Grau Celsius = " + ConverteTemperatura(temperatura,1) + " Grau Fahrenheit");
 
         temperatura = 0; //Fahrenheit
-        System.out.println(temperatura + " Grau Fahrenheit é " + ConverteTemperatura(temperatura,2) + " Grau Celsius");
+        System.out.println("2-> " + temperatura + " Grau Fahrenheit = " + ConverteTemperatura(temperatura,2) + " Grau Celsius");
 
         temperatura = 0; //Celsius
-        System.out.println(temperatura + " Grau Celsius é " + ConverteTemperatura(temperatura,3) + " Grau Kelvin");
+        System.out.println("3-> " + temperatura + " Grau Celsius = " + ConverteTemperatura(temperatura,3) + " Grau Kelvin");
 
         temperatura = 0; //Kelvin
-        System.out.println(temperatura + " Grau Kelvin é " + ConverteTemperatura(temperatura,4) + " Grau Celsius");
+        System.out.println("4-> " + temperatura + " Grau Kelvin = " + ConverteTemperatura(temperatura,4) + " Grau Celsius");
 
         temperatura = 0; //Fahrenheit
-        System.out.println(temperatura + " Grau Fahrenheit é " + ConverteTemperatura(temperatura,5) + " Grau Kelvin");
+        System.out.println("5-> " + temperatura + " Grau Fahrenheit = " + ConverteTemperatura(temperatura,5) + " Grau Kelvin");
 
         temperatura = 0; //Kelvin
-        System.out.println(temperatura + " Grau Kelvin é " + ConverteTemperatura(temperatura,6) + " Grau Fahrenheit");
+        System.out.println("6-> " + temperatura + " Grau Kelvin = " + ConverteTemperatura(temperatura,6) + " Grau Fahrenheit");
 
-        System.out.println(ConverteTemperatura(temperatura,7) + "");
+        System.out.println("7-> " + ConverteTemperatura(temperatura,7) + "");
       }
 
       public static double ConverteTemperatura(double temperatura, int tipoConversao){
@@ -77,10 +77,10 @@ class ConversaoDeTemperatura {
             resultado = temperatura - 273; //Celsius
             break;
           case(5): //Kelvin para Fahrenheit
-            resultado = 32 + (9*(temperatura-273/5)); //Kelvin
+            resultado = ((temperatura - 32)/9)*5+273; //Fahrenheit
             break;
           case(6): //Fahrenheit para Kelvin
-            resultado = ((temperatura - 32)/9)*5+273; //Fahrenheit
+            resultado = 32 + (9*((temperatura-273)/5)); //Kelvin
             break;
           default:
             resultado = temperatura/0;
