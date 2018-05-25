@@ -33,6 +33,21 @@ Para converter Fahrenheit em Kelvin: a temperatura informada estará em Fahrenhe
 Para converter Kelvin em Fahrenheit: a temperatura informada estará em Kelvin, e o método retornará o valor correspondente em Fahrenheit.
 */
 
+/*
+//1-Celsius para Fahrenheit
+0->32
+//2-Fahrenheit para Celsius
+0->-17,7778
+//3-Celsius para Kelvin
+0->273,15
+//4-Kelvin para Celsius
+0->-273,15
+//5-Fahrenheit para Kelvin
+0->255,372222222
+//6-Kelvin para Fahrenheit
+0->-459,67
+*/
+
 class ConversaoDeTemperatura {
       public static void main(String[] args) {
         System.out.println("Iniciando conversão de temperatura...\n");
@@ -60,33 +75,23 @@ class ConversaoDeTemperatura {
       }
 
       public static double ConverteTemperatura(double temperatura, int tipoConversao){
-        double resultado = 0;
 
         switch(tipoConversao)
         {
           case(1): //Celsius para Fahrenheit
-            resultado = 32 + (9*(temperatura/5)); //Fahrenheit
-            break;
-          case(2): // Fahrenheit para Celsius
-            resultado = ((temperatura - 32)/9)*5; //Celsius
-            break;
+            return ((temperatura/5)*9)+32; //Fahrenheit
+          case(2): //Fahrenheit para Celsius
+            return ((temperatura-32)*5)/9; //Celsius
           case(3): //Celsius para Kelvin
-            resultado = temperatura + 273; //Kelvin
-            break;
+            return temperatura+273; //Kelvin
           case(4): //Kelvin para Celsius
-            resultado = temperatura - 273; //Celsius
-            break;
-          case(5): //Kelvin para Fahrenheit
-            resultado = ((temperatura - 32)/9)*5+273; //Fahrenheit
-            break;
-          case(6): //Fahrenheit para Kelvin
-            resultado = 32 + (9*((temperatura-273)/5)); //Kelvin
-            break;
-          default:
-            resultado = temperatura/0;
-            break;
+            return temperatura-273; //Celsius
+          case(5): //Fahrenheit para Kelvin
+            return ((temperatura-32)*5)/9+273; //Kelvin
+          case(6): //Kelvin para Fahrenheit
+            return (((temperatura-273)*9)/5)+32; //Fahrenheit
         }
 
-        return resultado;
+        return (Double.NaN);
       }
 }
