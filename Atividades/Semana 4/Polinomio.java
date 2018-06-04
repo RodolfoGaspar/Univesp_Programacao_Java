@@ -21,10 +21,29 @@ LaTeX: xx e o arranjo de coeficientes por parâmetro;
 
 - Para elevar os LaTeX: xx a seus expoentes, crie um método de potenciação ou
 utilize um método já anteriormente abordado.
+
+Pergunta 3
+
+Para começarmos a calcular o valor do polinômio, é necessário que nos parâmetros
+tenhamos um arranjo de doubles. Arranjos são estruturas de dados, de tamanho
+fixo, que permitem armazenar um conjunto de valores de um mesmo tipo. Para a
+implementação de um arranjo de doubles de tamanho 10, o código correto
+está na alternativa:
+
 */
 
 class Polinomio {
     public static void main(String[] args) {
         System.out.println("Iniciando cálculo de polinomios...\n");
+
+        double[] d = new double[10];
+
+        for (int i=0; i<10; i++){
+
+            d[i] = i;
+
+            System.out.println("O vetor de double na posição "+i+ " é: "+d[i]);
+
+        }
     }
 }
