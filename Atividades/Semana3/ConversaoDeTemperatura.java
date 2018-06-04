@@ -95,3 +95,4 @@ class ConversaoDeTemperatura {
         return (Double.NaN);
       }
 }
+
