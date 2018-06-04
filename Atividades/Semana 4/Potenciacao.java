@@ -17,8 +17,19 @@ class Potenciacao {
     public static void main(String[] args) {
 
         System.out.println("Iniciando conversão de temperatura...\n");
+        System.out.println(eleva(2,4));
 
+    }
 
+    static double eleva (double x, int y) {
+
+        double resp = 1;
+
+        for (int i=0; i<y; i++)
+
+            resp *= x; // ou resp = resp * x;
+
+        return(resp);
 
     }
 }
