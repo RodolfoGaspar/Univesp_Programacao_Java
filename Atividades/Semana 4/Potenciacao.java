@@ -17,7 +17,7 @@ class Potenciacao {
     public static void main(String[] args) {
 
         System.out.println("Iniciando conversão de temperatura...\n");
-        System.out.println(eleva(2,4));
+        System.out.println(eleva(2,2));
 
     }
 

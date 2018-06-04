@@ -30,20 +30,51 @@ fixo, que permitem armazenar um conjunto de valores de um mesmo tipo. Para a
 implementação de um arranjo de doubles de tamanho 10, o código correto
 está na alternativa:
 
+Pergunta 4
+
+Objetivo de aprendizagem: Calcular o valor de um polinômio utilizando o laço
+de repetição for.
+
+Com base nas orientações apresentadas, o código para o cálculo do valor de
+um polinômio LaTeX: p(x)p(x) é:
 */
 
 class Polinomio {
     public static void main(String[] args) {
         System.out.println("Iniciando cálculo de polinomios...\n");
 
-        double[] d = new double[10];
+        int x=3;
+        double[] d = new double[x];
 
-        for (int i=0; i<10; i++){
-
+        for (int i=0; i<x; i++){
             d[i] = i;
 
             System.out.println("O vetor de double na posição "+i+ " é: "+d[i]);
-
         }
+
+        System.out.println(valor(x, d));
+    }
+
+    //A
+    static double valor(double x, double[] coef) {
+        double resp = 0;
+
+        for (int i=0; i<coef.length; i++)
+            resp += coef[i] * eleva (x, i); // ou resp = resp + coef[i] * eleva (x, i);
+
+        return(resp);
+    }
+
+
+    static double eleva (double x, int y) {
+
+        double resp = 1;
+
+        for (int i=0; i<y; i++)
+
+            resp *= x; // ou resp = resp * x;
+
+        return(resp);
+
     }
 }
